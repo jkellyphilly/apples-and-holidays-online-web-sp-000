@@ -68,11 +68,12 @@ def all_supplies_in_holidays(holiday_hash)
       # loop through each holiday's supplies
       holiday_supplies.each do |supply|
         # make the supply an array in order to capitalize each word
-        supply_array = supply.split(" ")
-        supply_array.collect {|supply_word| supply_word.capitalize!}
+        #supply_array = supply.split(" ")
+        #supply_array.collect {|supply_word| supply_word.capitalize!}
 
-        list_item = supply_array.join(" ") << ", "
-        holiday_string << list_item
+        #list_item = supply_array.join(" ") << ", "
+
+        holiday_string << supply << ", "
       end
       # remove space and comma for the last item
       holiday_string.delete_suffix!(', ')

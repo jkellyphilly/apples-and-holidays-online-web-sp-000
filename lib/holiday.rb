@@ -61,6 +61,7 @@ def all_supplies_in_holidays(holiday_hash)
     season_holiday_list.each do |holiday, holiday_supplies|
       # split the new symbol into
       holiday_array = holiday.to_s.split("_")
+      binding.pry
       holiday_string = "  " << holiday.to_s.capitalize << ": "
       holiday_supplies.each do |supply|
         list_item = supply.capitalize << ", "

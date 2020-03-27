@@ -66,6 +66,8 @@ def all_supplies_in_holidays(holiday_hash)
       end
       # remove space and comma for the last item
       holiday_string.delete_suffix(', ')
+
+      # return the string of supplies for this holiday
       puts holiday_string
     end
   end

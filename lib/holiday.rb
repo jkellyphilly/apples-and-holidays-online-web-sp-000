@@ -52,8 +52,11 @@ def all_supplies_in_holidays(holiday_hash)
   #   Fourth Of July: Fireworks, BBQ
   # etc.
   holiday_hash.each do |season, season_holiday_list|
+    # format the top line for the season 
     season_string = season.to_s.capitalize! << ":"
     puts season_string
+
+    # loop through each season's holidays 
     season_holiday_list.each do |holiday, holiday_supplies|
       # split the new symbol into an array with each word and capitalize it
       holiday_array = holiday.to_s.split("_")

@@ -61,9 +61,9 @@ def all_supplies_in_holidays(holiday_hash)
       # split the new symbol into an array with each word and capitalize it
       holiday_array = holiday.to_s.split("_")
       holiday_array.collect {|word| word.capitalize!}
-      holiday_array.join(" ")
 
-      holiday_string = "  " << holiday.to_s.capitalize << ": "
+      # print the beginning of the holiday's line
+      holiday_string = "  " << holiday_array.join(" ") << ": "
       holiday_supplies.each do |supply|
         list_item = supply.capitalize << ", "
         holiday_string << list_item

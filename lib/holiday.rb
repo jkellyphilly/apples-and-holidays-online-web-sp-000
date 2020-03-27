@@ -67,6 +67,8 @@ def all_supplies_in_holidays(holiday_hash)
 
       # loop through each holiday's supplies
       holiday_supplies.each do |supply|
+        # make the supply an array in order to capitalize each word
+        supply_array = supply.split(" ")
         list_item = supply.capitalize << ", "
         holiday_string << list_item
       end

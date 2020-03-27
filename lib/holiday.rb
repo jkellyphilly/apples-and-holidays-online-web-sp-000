@@ -64,6 +64,8 @@ def all_supplies_in_holidays(holiday_hash)
 
       # print the beginning of the holiday's line
       holiday_string = "  " << holiday_array.join(" ") << ": "
+
+      # loop through each holiday's supplies
       holiday_supplies.each do |supply|
         list_item = supply.capitalize << ", "
         holiday_string << list_item

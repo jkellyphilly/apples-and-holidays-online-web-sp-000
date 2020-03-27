@@ -64,6 +64,8 @@ def all_supplies_in_holidays(holiday_hash)
         list_item = supply.capitalize << ", "
         holiday_string << list_item
       end
+      # remove space and comma for the last item 
+      holiday_string.delete_suffix(', ')
       puts holiday_string
     end
   end

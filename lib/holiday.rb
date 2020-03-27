@@ -56,12 +56,13 @@ def all_supplies_in_holidays(holiday_hash)
     season_string = season.to_s.capitalize! << ":"
     puts season_string
 
-    # loop through each season's holidays 
+    # loop through each season's holidays
     season_holiday_list.each do |holiday, holiday_supplies|
       # split the new symbol into an array with each word and capitalize it
       holiday_array = holiday.to_s.split("_")
       holiday_array.collect {|word| word.capitalize!}
-      binding.pry
+      holiday_array.join(" ")
+
       holiday_string = "  " << holiday.to_s.capitalize << ": "
       holiday_supplies.each do |supply|
         list_item = supply.capitalize << ", "
